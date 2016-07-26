@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+    <!-- DIMA -->
+    <changeSet id="1" author="dima">
+        <comment>create table</comment>
+        <sqlFile encoding="utf8"
+                 path="src/main/resources/scripts/sprint1/itristan/001_ddl_personal.sql"
+                 splitStatements="true" stripComments="true"/>
+    </changeSet>
+
+    <!-- Raraujo -->
+    <changeSet id="2" author="raraujo">
+        <comment>insert into table personal</comment>
+        <sqlFile encoding="utf8"
+                 path="src/main/resources/scripts/sprint1/raraujo/001_dml_personal.sql"
+                 splitStatements="true" stripComments="true"/>
+    </changeSet>
+
+    <changeSet id="3" author="raraujo">
+        <comment>correcting value of field nombre to Nazar</comment>
+        <sqlFile encoding="utf8"
+                 path="src/main/resources/scripts/sprint1/raraujo/002_dml_personal.sql"
+                 splitStatements="true" stripComments="true"/>
+    </changeSet>
+
+</databaseChangeLog>
